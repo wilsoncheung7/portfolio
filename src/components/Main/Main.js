@@ -8,12 +8,18 @@ import CreditCardIcon from '@material-ui/icons/CreditCard';
 import LockIcon from '@material-ui/icons/Lock';
 import CardMembershipIcon from '@material-ui/icons/CardMembership';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import ProfileList from './ProfileList';
+import SkillList from './SkillList';
+import HabbitList from './HabbitList';
+import EducationList from './EducationList';
+import '../../assets/scss/Main.scss';
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: '80%',
+    marginTop:10,
     // height: '50%',
   },
   paper: {
@@ -23,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden',
     fontSize: 20,
     // color: theme.palette.text.secondary,
-    height: 200
+    height: 300
   },
 }));
 
@@ -35,9 +41,10 @@ export default function NestedGrid() {
       <React.Fragment>
         <Grid item xs={6} wrap="wrap">
           {/* <Link to={ROUTES.PASSWORD_CHANGE}> */}
-            <Paper className={classes.paper}>
+          <Paper className={classes.paper}>
             <AccountBoxIcon />
               Personal Profile
+              <ProfileList />
           </Paper>
           {/* </Link> */}
         </Grid>
@@ -45,6 +52,8 @@ export default function NestedGrid() {
           <Paper className={classes.paper}>
             <CardMembershipIcon />
             Skill
+            <SkillList />
+
           </Paper>
         </Grid>
       </React.Fragment>
@@ -58,12 +67,14 @@ export default function NestedGrid() {
           <Paper className={classes.paper}>
             <CreditCardIcon />
             Habbit
-            </Paper>
+            <HabbitList />
+          </Paper>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>
             <LockIcon />
             Education
+            <EducationList />
           </Paper>
         </Grid>
       </React.Fragment>
@@ -71,15 +82,18 @@ export default function NestedGrid() {
   }
 
   return (
-    <div className={classes.root}>
-      <Grid container spacing={1}>
-        <Grid container item xs={12} spacing={6}>
-          <FormRow />
+    <div className="main">
+      <div className={classes.root}>
+        <Grid container spacing={1}>
+          <Grid container item xs={12} spacing={6}>
+            <FormRow />
+          </Grid>
+          <Grid container item xs={12} spacing={6}>
+            <FormRow2 />
+          </Grid>
         </Grid>
-        <Grid container item xs={12} spacing={6}>
-          <FormRow2 />
-        </Grid>
-      </Grid>
+      </div>
     </div>
+
   );
 }

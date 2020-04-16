@@ -2,10 +2,11 @@ html,
 body {
     overflow-x: hidden;
     background: #EEF4F8;
+    background-image: url('../images/wallpaper.png');
+
 }
 .main {
     position: relative;
-    // background-image: url('../butterfly.jpg');
     // min-height: 22rem;
     opacity: 0.8;
     display: flex;

@@ -34,7 +34,7 @@ export default function ButtonAppBar() {
             {/* <CustomizedMenus/> */}
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Profile
+            Portfolio Site
           </Typography>
           {/* <Button color="inherit">Login</Button> */}
         </Toolbar>

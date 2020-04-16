@@ -4,12 +4,14 @@ import './App.scss';
 import ButtonAppBar from './components/NavBar'
 import Main from './components/Main'
 import Footer from './components/Footer'
+import SlideShow from './components/SlideShow'
+
 
 function App() {
   return (
     <React.Fragment>
       {/* <div className="App"> */}
-        {/* <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -23,9 +25,10 @@ function App() {
           Learn React
         </a>
       </header> */}
-        <ButtonAppBar />
-        <Main/>
-        <Footer/>
+      <ButtonAppBar />
+      <SlideShow />
+      <Main />
+      <Footer />
       {/* </div> */}
     </React.Fragment>
   );
