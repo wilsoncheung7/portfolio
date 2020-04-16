@@ -52,11 +52,28 @@ export default function Footer() {
         )
     }
 
+    function FormRow2(){
+        return (
+            <div>
+                <Grid item xs={4} className={classes.paper}>
+
+                </Grid>
+                <Grid item xs={4}>
+
+                </Grid>
+                <Grid item xs={4}>
+
+                </Grid>
+            </div>
+        )
+    }
+
     return (
         <div className={classes.root}>
             <Grid container spacing={3} className={classes.paper}>
                 <Grid container item xs={12} spacing={3}>
                     <FormRow />
+                    <FormRow2/>
                 </Grid>
             </Grid>
         </div>

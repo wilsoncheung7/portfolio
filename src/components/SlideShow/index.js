@@ -4,6 +4,7 @@ import butterfly from '../../assets/images/butterfly.jpg'
 import bang_drem from '../../assets/images/bang_dream.jpg'
 import You from '../../assets/images/You.jpg'
 import { Slide } from 'react-slideshow-image';
+import '../../assets/scss/Main.scss';
 
 const slideImages = [
     butterfly,

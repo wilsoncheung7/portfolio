@@ -2,6 +2,7 @@ html,
 body {
     overflow-x: hidden;
     background: #EEF4F8;
+     //Credit: https://play.google.com/store/apps/details?id=com.whatsapp.wallpaper&hl=en_US
     background-image: url('../images/wallpaper.png');
 
 }
@@ -15,8 +16,9 @@ body {
 }
 
 .slide-container {
-    width: 100%;
+    width: 80%;
     margin: auto;
+    padding-top: 10px;
 }
 
 h3 {
