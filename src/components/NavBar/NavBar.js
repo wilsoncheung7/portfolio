@@ -11,7 +11,8 @@ import CustomizedMenus from './Menu'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    textAlign:'center'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -26,11 +27,11 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={{background:'#131A22'}}>
+      <AppBar position="static" style={{background:'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)'}}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             {/* <MenuIcon /> */}
-            <CustomizedMenus/>
+            {/* <CustomizedMenus/> */}
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             Profile

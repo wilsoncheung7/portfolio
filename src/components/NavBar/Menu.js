@@ -1,17 +1,15 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import DraftsIcon from '@material-ui/icons/Drafts';
 import SendIcon from '@material-ui/icons/Send';
+import MenuIcon from '@material-ui/icons/Menu';
+import {Button, Menu, MenuItem, ListItemIcon, ListItemText} from '@material-ui/core'
 
 const StyledMenu = withStyles({
   paper: {
     border: '1px solid #d3d4d5',
+    
   },
 })((props) => (
   <Menu
@@ -57,10 +55,10 @@ export default function CustomizedMenus() {
         aria-controls="customized-menu"
         aria-haspopup="true"
         variant="contained"
-        color="primary"
+        // color="primary"
         onClick={handleClick}
       >
-        Open Menu
+        <MenuIcon/>
       </Button>
       <StyledMenu
         id="customized-menu"
