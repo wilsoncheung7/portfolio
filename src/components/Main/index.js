@@ -2,21 +2,12 @@ import React from 'react';
 import '../../assets/scss/Main.scss';
 import butterfly from '../../assets/images/butterfly.jpg'
 import bang_drem from '../../assets/images/bang_dream.jpg'
-import natsume from '../../assets/images/natsume.jpg'
 import { Slide } from 'react-slideshow-image';
 import ComplexGrid from './Main'
-// import { makeStyles } from '@material-ui/core/styles';
-
-// const useStyles = makeStyles((theme)=>({
-//     root:{
-//         flexGrow:1,
-//     }
-// }))
 
 const slideImages = [
     butterfly,
     bang_drem,
-    natsume,
 ];
 
 const properties = {
