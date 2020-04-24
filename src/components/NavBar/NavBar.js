@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    textAlign:'left'
   },
 }));
 
@@ -28,17 +29,17 @@ export default function ButtonAppBar() {
   return (
     <div className={classes.root}>
        {/*blue*/} 
-      <AppBar position="static" style={{background:'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)'}}>
+      {/* <AppBar position="static" style={{background:'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)'}}> */}
       {/*red*/} 
       {/* <AppBar position="static" style={{background:'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)'}}> */}
-      {/* <AppBar position="static" style={{background:'#131A22'}}> */}
+      <AppBar position="static" style={{background:'#131A22'}}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             {/* <MenuIcon /> */}
             {/* <CustomizedMenus/> */}
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Portfolio Site
+            Zhang's Portfolio Site
           </Typography>
           {/* <Button color="inherit">Login</Button> */}
         </Toolbar>

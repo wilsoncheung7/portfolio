@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: '80%',
-    marginTop:10,
+    marginTop: 10,
     // height: '50%',
   },
   paper: {
@@ -56,6 +56,7 @@ export default function NestedGrid() {
 
           </Paper>
         </Grid>
+        {/* <SnowFlakes/> */}
       </React.Fragment>
     );
   }
@@ -84,6 +85,7 @@ export default function NestedGrid() {
   return (
     <div className="main">
       <div className={classes.root}>
+        
         <Grid container spacing={1}>
           <Grid container item xs={12} spacing={6}>
             <FormRow />
