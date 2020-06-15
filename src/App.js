@@ -10,7 +10,7 @@ function App() {
   return (
     <React.Fragment>
       <ButtonAppBar />
-      <Intro/>
+      <Intro />
       <Main />
       <Footer />
     </React.Fragment>

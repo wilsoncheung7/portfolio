@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         textAlign: 'center',
         alignItems: 'center',
-        minHeight: 1000
+        minHeight: 600
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -35,10 +35,10 @@ export default function Intro() {
             </Typography>
                 <Button>
                     <a href=''>
-                    <span/>
-                    <span/>
-                    <span/>
-                    <span/>
+                        <span />
+                        <span />
+                        <span />
+                        <span />
                 View my work
                 <ArrowForwardIcon />
                     </a>
