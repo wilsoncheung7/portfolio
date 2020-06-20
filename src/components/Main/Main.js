@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { Link } from 'react-router-dom';
 // import * as ROUTES from '../../constants/routes';
 import CreditCardIcon from '@material-ui/icons/CreditCard';
 import LockIcon from '@material-ui/icons/Lock';
@@ -23,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     width: '80%',
     marginTop: 10,
-    // height: '50%',
+    height: '100%',
   },
   container: {
     display: 'flex',
@@ -48,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NestedGrid() {
+export default function Main() {
   const classes = useStyles();
 
   function FormRow() {
@@ -105,35 +104,22 @@ export default function NestedGrid() {
     <div className="main">
       <div className={classes.root}>
 
-        {/* <Grid container spacing={1}>
+        <Grid container wrap='nowrap' spacing={1}>
           <Grid container item xs={12} spacing={6}>
             <FormRow />
           </Grid>
           <Grid container item xs={12} spacing={6}>
             <FormRow2 />
           </Grid>
-        </Grid> */}
-         <FormControlLabel
-        control={<Switch checked={checked} onChange={handleChange} />}
-        label="Show"
-      />
-      <div className={classes.container}>
-        <Grow in={checked}>
+        </Grid>
+      {/* <div className={classes.container}>
         <Grid container item xs={12} spacing={6}>
             <FormRow />
           </Grid>
-        </Grow>
-        {/* Conditionally applies the timeout prop to change the entry speed. */}
-        <Grow
-          in={checked}
-          style={{ transformOrigin: '0 0 0' }}
-          {...({ timeout: 1000 })}
-        >
           <Grid container item xs={12} spacing={6}>
             <FormRow2 />
           </Grid>
-        </Grow>
-      </div>
+      </div> */}
       </div>
     </div>
 

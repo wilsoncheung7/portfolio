@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles, Typography, Button } from '@material-ui/core';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import '../../assets/scss/Intro.scss';
+import {Link,Router} from 'react-router-dom';
+import * as ROUTES from '../../constants/routes';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -34,14 +36,18 @@ export default function Intro() {
                     I'm a software developer.
             </Typography>
                 <Button>
-                    <a href=''>
+                <Link to={ROUTES.DETAILS}>
+
+                {/* <a href=''> */}
                         <span />
                         <span />
                         <span />
                         <span />
                 View my work
                 <ArrowForwardIcon />
-                    </a>
+                    {/* </a> */}
+                </Link>
+
                 </Button>
 
             </div>

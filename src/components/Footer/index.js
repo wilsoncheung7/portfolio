@@ -8,9 +8,9 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
-        position: 'static',
+        position: 'absolute',
         bottom: 0,
-        // width: '99.54%',
+        width: '100%',
         overflow:'hidden',
         marginTop: '30rem',
         background: '#384984',
