@@ -1,6 +1,7 @@
 import React from 'react';
-import { makeStyles, Typography, createMuiTheme, ThemeProvider,responsiveFontSizes } from '@material-ui/core';
+import { makeStyles, Typography, createMuiTheme, ThemeProvider, responsiveFontSizes } from '@material-ui/core';
 import NewsFeed from '../../assets/images/newsfeed.png';
+import InsClone from '../../assets/images/insclone.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const theme = createMuiTheme();
-theme.typography.h6={
-  fontSize:'1rem'
+theme.typography.h6 = {
+  fontSize: '1rem'
 }
 
 export default function ProfileList() {
@@ -32,7 +33,17 @@ export default function ProfileList() {
   let message = [];
   const rows = messages.split('.');
   for (let i = 0; i < rows.length; i++) {
-    message.push(<Typography variant='h6'>{rows[i]}</Typography>)
+    message.push(<Typography variant='h6'>{rows[i]}</Typography>);
+  }
+
+  const messages2 = 'Create an application in Flutter which clone the basic UI of an Instagram application.'
+    + 'I have used Google Firebase to store user information.'
+    + 'As application is in Flutter so it is compatible on both iOS and Android.';
+
+  let message2 = [];
+  const rows2 = messages2.split('.');
+  for (let i = 0; i < rows2.length; i++) {
+    message2.push(<Typography varient='h6'>{rows2[i]}</Typography>);
   }
 
 
@@ -40,28 +51,28 @@ export default function ProfileList() {
 
     <ThemeProvider theme={theme}>
       <div className={classes.root}>
-      <div style={{paddingBottom:100}}>
-        <Typography variant='h3' component='span'>Projects</Typography>
+        <div style={{ paddingBottom: 100 }}>
+          <Typography variant='h3' component='span'>Projects</Typography>
+        </div>
+        <div className={classes.contents}>
+          <div>
+            <Typography variant='h4' component='span'>Android App: NewsFeed App</Typography>
+            {message}
+          </div>
+          <div style={{ position: 'absolute', right: '20%' }} >
+            <img src={NewsFeed} alt='newsfeed' height={500} />
+          </div>
+        </div>
+        <div className={classes.contents}>
+          <div>
+            <img src={InsClone} alt='newsfeed' height={500} />
+          </div>
+          <div style={{ position: 'absolute', right: '20%' }}>
+            <Typography variant='h4' component='span'>Flutter App: Instagram Clone</Typography>
+            {message2}
+          </div>
+        </div>
       </div>
-      <div className={classes.contents}>
-        <div>
-          <Typography variant='h4'component='span' >Android App: NewsFeed App</Typography>
-          {message}
-        </div>
-        <div style={{ position: 'absolute', right: '20%' }} >
-          <img src={NewsFeed} alt='newsfeed' height={500} />
-        </div>
-      </div>
-      <div className={classes.contents}>
-        <div>
-          <img src={NewsFeed} alt='newsfeed' height={500} />
-        </div>
-        <div style={{ position: 'absolute', right: '20%' }}>
-          <Typography>Android App: NewsFeed App</Typography>
-
-        </div>
-      </div>
-    </div>
 
     </ThemeProvider>
   );
