@@ -59,7 +59,7 @@ export default function ProfileList() {
             <Typography variant='h4' component='span'>Android App: NewsFeed App</Typography>
             {message}
           </div>
-          <div style={{ position: 'absolute', right: '20%' }} >
+          <div style={{marginLeft: '10%' }} >
             <img src={NewsFeed} alt='newsfeed' height={500} />
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function ProfileList() {
           <div>
             <img src={InsClone} alt='newsfeed' height={500} />
           </div>
-          <div style={{ position: 'absolute', right: '20%' }}>
+          <div style={{marginLeft: '10%' }}>
             <Typography variant='h4' component='span'>Flutter App: Instagram Clone</Typography>
             {message2}
           </div>
