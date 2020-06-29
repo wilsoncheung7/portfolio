@@ -8,11 +8,14 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
-    color: 'white'
+    color: 'white',
+    // flexWrap:'wrap',
+    justifyContent:'space-around',
     // backgroundColor: theme.palette.background.paper,
   },
   contents: {
     display: 'flex',
+    flexWrap:'wrap',
     flexDirection: 'row',
     position: 'relative',
     minHeight: 600
