@@ -1,80 +1,92 @@
-import React from 'react';
-import { makeStyles, Typography, createMuiTheme, ThemeProvider, responsiveFontSizes } from '@material-ui/core';
-import YorkU from '../../assets/images/YorkU.jpg';
+import React, { useState } from 'react';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    position: 'relative',
-    color: 'white',
-    margin:100,
-    justifyContent:'center',
-    width:'100%',
-    
-    // backgroundColor: theme.palette.background.paper,
-  },
-  contents: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap:'wrap',
-    position: 'relative',
-    minHeight: 500,
-    width:'100%',
-  },
-}));
+function About() {
+  // const [state, setState] = useState({
+  //   menu: false,
+  // });
 
-const theme = createMuiTheme();
-theme.typography.h6 = {
-  fontSize: '1rem'
-}
+  // const toggleMenu = () => {
+  //   setState({ menu: !state.menu })
+  // }
 
-export default function About() {
-  const classes = useStyles();
-  const messages = 'Started at 2012.'+'Graduated at 2017.'+'Richmond Hill, ON, Canada';
-
-  let message = [];
-  const rows = messages.split('.');
-  for (let i = 0; i < rows.length; i++) {
-    message.push(<Typography variant='h6'>{rows[i]}</Typography>);
-  }
-
-  const messages2 = 'Computer Science.'+'Started at 2017.'+'Currently studying.'+'North York, ON, Canada';
-
-  let message2 = [];
-  const rows2 = messages2.split('.');
-  for (let i = 0; i < rows2.length; i++) {
-    message2.push(<Typography varient='h6'>{rows2[i]}</Typography>);
-  }
-
+  // const show = state.menu ? 'show' : '';
 
   return (
+    <React.Fragment>
+      <div className='jumbotron text-center' style={{ marginBottom: 0 }}>
+        <h1>My First Bootstrap 4 Page</h1>
+        <p>Resize this responsive page to see the effect!</p>
+      </div>
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Nav>
+            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes">
+              Dank memes
+      </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
 
-    <ThemeProvider theme={theme}>
-      <div className={classes.root}>
-        <div style={{ paddingBottom: 100 }}>
-          <Typography variant='h3' component='span'>Education</Typography>
-        </div>
-        <div className={classes.contents}>
-          <div>
-            <Typography variant='h4' component='span'>Richmond Hill High School</Typography>
-            {message}
+      <div className='container' style={{ marginTop: 30 }}>
+        <div className="row">
+          <div className="col-sm-4">
+            <h2>About Me</h2>
+            <h5>Photo of me:</h5>
+            <div className="fakeimg" style={{ height: 200, background: '#aaa' }}>Fake Image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+            <h3>Some Links</h3>
+            <p>Lorem ipsum dolor sit ame.</p>
+            <ul className="nav nav-pills flex-column">
+              <li className="nav-item">
+                <a href="#" className="nav-link active">Active</a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link">Link</a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link">Link</a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <hr className="d-sm-none" />
           </div>
-          {/* <div style={{marginLeft: '10%'}} >
-            <img src={NewsFeed} alt='newsfeed' height={500} />
-          </div> */}
-        </div>
-        <div className={classes.contents}>
-          <div>
-            <img src={YorkU} alt='newsfeed' width='70%'/>
-          </div>
-          <div style={{marginLeft:'10%'}}>
-            <Typography variant='h4' component='span'>York University</Typography>
-            {message2}
+          <div className="col-sm-8">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Dec 7, 2017</h5>
+            <div className="fakeimg" style={{ height: 200, background: '#aaa' }}>Fake Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <br />
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div className="fakeimg" style={{ height: 200, background: '#aaa' }}>Fake Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
           </div>
         </div>
       </div>
-
-    </ThemeProvider>
-  );
+      <div className="jumbotron text-center" style={{marginBottom:0}}>
+        <p>Footer</p>
+      </div>
+    </React.Fragment>
+  )
 }
+
+export default About;
