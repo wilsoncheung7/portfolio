@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import { DATA } from './Data';
+import { DATA } from '../DataProvider/AboutData';
 
 const About = () => {
   return (

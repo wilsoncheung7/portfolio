@@ -8,6 +8,7 @@ import CustomizedMenus from './Menu'
 import HomeIcon from '@material-ui/icons/Home';
 import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
+import Clock from './Clock';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,6 +52,7 @@ export default function ButtonAppBar() {
           <Button className={classes.title} color="inherit">About</Button>
           </Link>
         {/* <CustomizedMenus/> */}
+        <Clock/>
 
         </Toolbar>
       {/* </AppBar> */}

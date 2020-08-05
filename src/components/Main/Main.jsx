@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import ProfileList from './ProfileList';
 import '../../assets/scss/Main.scss';
 import Zoom from 'react-reveal/Zoom'; // Importing Zoom effect
-import Clock from './Clock';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,7 +38,6 @@ export default function Main() {
           <ProfileList />
         </Zoom>
       </div>
-      <Clock />
     </div>
 
   );

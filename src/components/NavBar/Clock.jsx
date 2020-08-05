@@ -15,7 +15,7 @@ const Clock = () => {
     // const times=new Date();
     return (
         <div>
-            <h2 style={{ color: 'white', fontSize: '3rem' }}>{date.toLocaleString()}</h2>
+            <h2 style={{ color: 'white', fontSize: '2rem' }}>{date.toLocaleString()}</h2>
         </div>
     )
 }
